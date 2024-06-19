@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{11738A42-ACE0-4684-A58A-9AC0E8B9CF10}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TektonLabs.Challenge.Domain", "src\TektonLabs.Challenge.Domain\TektonLabs.Challenge.Domain.csproj", "{79CF3ADE-7036-4321-BE40-166B23842819}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TektonLabs.Challenge.Application", "src\TektonLabs.Challenge.Application\TektonLabs.Challenge.Application.csproj", "{1192DACE-A4E8-462D-949B-BD9B2DC60E87}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TektonLabs.Challenge.Infraestructure", "src\TektonLabs.Challenge.Infraestructure\TektonLabs.Challenge.Infraestructure.csproj", "{34DABBAC-6558-460A-895D-AC55A3CBEE2A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TektonLabs.Challenge.API", "src\TektonLabs.Challenge.API\TektonLabs.Challenge.API.csproj", "{D21AF65C-BD07-4C69-9585-91275FE8EB0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{23A79661-684D-4024-B137-0C39C695441D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TektonLabs.Challenge.Application.UnitTests", "test\TektonLabs.Challenge.Application.UnitTests\TektonLabs.Challenge.Application.UnitTests.csproj", "{43674EE0-6C62-4295-914D-7919CA1F56EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79CF3ADE-7036-4321-BE40-166B23842819}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79CF3ADE-7036-4321-BE40-166B23842819}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79CF3ADE-7036-4321-BE40-166B23842819}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79CF3ADE-7036-4321-BE40-166B23842819}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1192DACE-A4E8-462D-949B-BD9B2DC60E87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1192DACE-A4E8-462D-949B-BD9B2DC60E87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1192DACE-A4E8-462D-949B-BD9B2DC60E87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1192DACE-A4E8-462D-949B-BD9B2DC60E87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34DABBAC-6558-460A-895D-AC55A3CBEE2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34DABBAC-6558-460A-895D-AC55A3CBEE2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34DABBAC-6558-460A-895D-AC55A3CBEE2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34DABBAC-6558-460A-895D-AC55A3CBEE2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D21AF65C-BD07-4C69-9585-91275FE8EB0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D21AF65C-BD07-4C69-9585-91275FE8EB0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D21AF65C-BD07-4C69-9585-91275FE8EB0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D21AF65C-BD07-4C69-9585-91275FE8EB0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43674EE0-6C62-4295-914D-7919CA1F56EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43674EE0-6C62-4295-914D-7919CA1F56EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43674EE0-6C62-4295-914D-7919CA1F56EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43674EE0-6C62-4295-914D-7919CA1F56EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{79CF3ADE-7036-4321-BE40-166B23842819} = {11738A42-ACE0-4684-A58A-9AC0E8B9CF10}
+		{1192DACE-A4E8-462D-949B-BD9B2DC60E87} = {11738A42-ACE0-4684-A58A-9AC0E8B9CF10}
+		{34DABBAC-6558-460A-895D-AC55A3CBEE2A} = {11738A42-ACE0-4684-A58A-9AC0E8B9CF10}
+		{D21AF65C-BD07-4C69-9585-91275FE8EB0B} = {11738A42-ACE0-4684-A58A-9AC0E8B9CF10}
+		{43674EE0-6C62-4295-914D-7919CA1F56EF} = {23A79661-684D-4024-B137-0C39C695441D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F514ECFD-5C50-4636-AEB9-0AA34330569D}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.6" />
+    <PackageReference Include="Moq" Version="4.20.70" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\TektonLabs.Challenge.Application\TektonLabs.Challenge.Application.csproj" />
+    <ProjectReference Include="..\..\src\TektonLabs.Challenge.Domain\TektonLabs.Challenge.Domain.csproj" />
+    <ProjectReference Include="..\..\src\TektonLabs.Challenge.Infraestructure\TektonLabs.Challenge.Infraestructure.csproj" />
+  </ItemGroup>
+
+</Project>
