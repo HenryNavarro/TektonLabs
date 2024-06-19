@@ -1,9 +1,8 @@
 ﻿namespace TektonLabs.Challenge.Domain.Abstranctions;
-//Orientado a Eventos de Dominio
 public abstract class Entity
 {
     private readonly List<IDomainEvent> _domainEvents = new();
-    public int Id { get; init; } //Una vez definido, no se modificara el identificador
+    public int Id { get; init; }
     protected Entity() { }
     protected Entity(int id)
     {

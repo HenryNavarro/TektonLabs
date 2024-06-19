@@ -7,29 +7,33 @@ namespace TektonLabs.Challenge.API.Extensions;
 
 public static class SeedDataExtensions
 {
-    public static void SeedData(this IApplicationBuilder app)
+    public static async void SeedData(this IApplicationBuilder app)
     {
         using var scope = app.ApplicationServices.CreateScope();
         var statusTypeRepository = scope.ServiceProvider.GetRequiredService<IStatusTypeRepository>();
-        var productRepository = scope.ServiceProvider.GetRequiredService<IProductRepository>();
-        var unitOfWork = scope.ServiceProvider.GetRequiredService<IUnitOfWork>();
-
-        statusTypeRepository.Add(StatusType.Inactivo);
-        statusTypeRepository.Add(StatusType.Activo);
-        var fake = new Faker();
-
-        for (int i = 51; i <= 100; i++)
+    
+        if (await statusTypeRepository.GetByIdAsync(StatusType.Inactivo.Code) is null)
         {
-            productRepository.Add(
-                Product.Create(i,
-               fake.Commerce.ProductName(),
-               fake.Commerce.ProductDescription(),
-               Price.Create(fake.Random.Int(500, 9999), fake.Random.Int(0, 100)).Value,
-               fake.Random.Int(0, 9999),
-               StatusType.Activo.Code)
-            );
+            var productRepository = scope.ServiceProvider.GetRequiredService<IProductRepository>();
+            var unitOfWork = scope.ServiceProvider.GetRequiredService<IUnitOfWork>();
 
+            statusTypeRepository.Add(StatusType.Inactivo);
+            statusTypeRepository.Add(StatusType.Activo);
+
+            var fake = new Faker();
+
+            for (int i = 51; i <= 100; i++)
+            {
+                productRepository.Add(
+                    Product.Create(i,
+                   fake.Commerce.ProductName(),
+                   fake.Commerce.ProductDescription(),
+                   Price.Create(fake.Random.Int(500, 9999), fake.Random.Int(0, 100)).Value,
+                   fake.Random.Int(0, 9999),
+                   StatusType.Activo.Code)
+                );
+            }
+            await unitOfWork.SaveChangesAsync();
         }
-        unitOfWork.SaveChangesAsync();
     }
 }

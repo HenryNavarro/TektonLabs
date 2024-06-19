@@ -5,7 +5,6 @@ using TektonLabs.Challenge.Domain.Products.IRepository;
 
 namespace TektonLabs.Challenge.Application.Products.Get;
 
-//el Handlear No se expone a agentes extornos, quien se expone es el query
 internal sealed class GetProductQueryHandler
  : IQueryHandler<GetProductQuery, GetProductResponse?>
 {

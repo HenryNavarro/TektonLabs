@@ -43,8 +43,6 @@ public class ValidationBehavior<TRequest, TResponse>
             throw new Exceptions.ValidationException(validationErrors);
         }
 
-
         return await next();
-
     }
 }

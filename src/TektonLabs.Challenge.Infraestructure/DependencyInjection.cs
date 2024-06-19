@@ -1,5 +1,4 @@
-﻿using LazyCache;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TektonLabs.Challenge.Application.Abstractions.Discount;
@@ -41,12 +40,8 @@ public static class DependencyInjection
 
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
 
-        //services.AddSingleton<ISqlConnectionFactory>(_ => new SqlConnectionFactory(connectionString));
         services.AddLazyCache();
         services.AddTransient<IStatusTypeReadRepository, CacheProvider>();
-
-
-        //services.AddScoped<IStatusTypeRepository, CacheProvider>();
 
         return services;
     }

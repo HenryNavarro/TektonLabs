@@ -10,7 +10,6 @@ namespace TektonLabs.Challenge.API.Controllers.Product;
 [Route("api/products")]
 public class ProductsController : ControllerBase
 {
-
     private readonly ISender _sender;
 
     public ProductsController(ISender sender)
@@ -42,6 +41,7 @@ public class ProductsController : ControllerBase
 
         return Ok(result);
     }
+
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(
         int id,

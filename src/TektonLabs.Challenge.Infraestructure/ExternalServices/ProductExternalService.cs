@@ -1,44 +1,42 @@
 ﻿using System.Text.Json;
-using System.Text.Json.Serialization;
 using TektonLabs.Challenge.Application.Abstractions.Discount;
 using TektonLabs.Challenge.Domain.Abstranctions;
 
-namespace TektonLabs.Challenge.Infraestructure.ExternalServices
+namespace TektonLabs.Challenge.Infraestructure.ExternalServices;
+
+internal sealed class ProductExternalService : IProductExternalService
 {
-    internal sealed class ProductExternalService : IProductExternalService
+    private readonly HttpClient _httpClient;
+    JsonSerializerOptions _serializerOptions;
+    private readonly string _path;
+    public ProductExternalService(string path)
     {
-        private readonly HttpClient _httpClient;
-        JsonSerializerOptions _serializerOptions;
-        private readonly string _path;
-        public ProductExternalService(string path)
+        _httpClient = new HttpClient();
+        _path = path;
+        _serializerOptions = new JsonSerializerOptions
         {
-            _httpClient = new HttpClient();
-            _path = path;
-            _serializerOptions = new JsonSerializerOptions
-            {
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                WriteIndented = true
-            };
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            WriteIndented = true
+        };
+    }
+
+    public async Task<Result<int>> GetDiscountFromProduct(int productId)
+    {
+        int discount = 0;
+
+        HttpResponseMessage response = await _httpClient.GetAsync(_path + $"/{productId}");
+
+        if (response.IsSuccessStatusCode)
+        {
+
+            string content = await response.Content.ReadAsStringAsync();
+            var product = JsonSerializer.Deserialize<ProductExternalResponse>(content, _serializerOptions);
+            if (product is null)
+                return Result.Failure<int>(Error.NullValue);
+
+            discount = product.discount;
         }
 
-        public async Task<Result<int>> GetDiscountFromProduct(int productId)
-        {
-            int discount = 0;
-
-            HttpResponseMessage response = await _httpClient.GetAsync(_path + $"/{productId}");
-
-            if (response.IsSuccessStatusCode)
-            {
-
-                string content = await response.Content.ReadAsStringAsync();
-                var product = JsonSerializer.Deserialize<ProductExternalResponse>(content, _serializerOptions);
-                if (product is null)
-                    return Result.Failure<int>(Error.NullValue);
-
-                discount = product.discount;
-            }
-
-            return discount;
-        }
+        return discount;
     }
 }

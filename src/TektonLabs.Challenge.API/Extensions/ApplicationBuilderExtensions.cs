@@ -5,7 +5,6 @@ using TektonLabs.Challenge.Infraestructure;
 namespace TektonLabs.Challenge.API.Extensions;
 public static class ApplicationBuilderExtensions
 {
-
     public static async void ApplyMigration(this IApplicationBuilder app)
     {
         using (var scope = app.ApplicationServices.CreateScope())
@@ -21,7 +20,7 @@ public static class ApplicationBuilderExtensions
             catch (Exception ex)
             {
                 var logger = loggerFactory.CreateLogger<Program>();
-                logger.LogError(ex, "Error en migracion");
+                logger.LogError(ex, "Error en aplicar la Migracíón");
             }
         }
     }

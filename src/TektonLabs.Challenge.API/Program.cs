@@ -1,4 +1,3 @@
-using Serilog;
 using TektonLabs.Challenge.API.Extensions;
 using TektonLabs.Challenge.Application;
 using TektonLabs.Challenge.Infraestructure;

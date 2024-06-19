@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-
-namespace TektonLabs.Challenge.Domain.Abstranctions;
+﻿namespace TektonLabs.Challenge.Domain.Abstranctions;
 public class Result
 {
     protected internal Result(bool isSuccess, Error error)
