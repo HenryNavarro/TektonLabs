@@ -3,7 +3,7 @@ using TektonLabs.Challenge.Domain.Abstranctions;
 
 namespace TektonLabs.Challenge.Infraestructure.Repositories;
 
-internal abstract class Repository<T> where T : Entity
+public abstract class Repository<T> where T : Entity
 {
     protected readonly ApplicationDbContext DbContext;
 

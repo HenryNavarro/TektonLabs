@@ -5,7 +5,7 @@ using TektonLabs.Challenge.Domain.Products.IRepository;
 
 namespace TektonLabs.Challenge.Application.Products.Get;
 
-internal sealed class GetProductQueryHandler
+public sealed class GetProductQueryHandler
  : IQueryHandler<GetProductQuery, GetProductResponse?>
 {
 

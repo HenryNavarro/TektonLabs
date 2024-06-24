@@ -1,17 +1,28 @@
-﻿using TektonLabs.Challenge.Domain.Products;
-using TektonLabs.Challenge.Infraestructure;
+﻿using LazyCache;
+using Moq;
+using TektonLabs.Challenge.Domain.Abstranctions;
+using TektonLabs.Challenge.Domain.Products;
+using TektonLabs.Challenge.Domain.Products.IRepository;
+using TektonLabs.Challenge.Infraestructure.Cache;
 
 namespace TektonLabs.Challenge.Application.UnitTests.Mocks;
 internal sealed class MockStatusTypeRepository
 {
-    public static void AddDataStatusTypeRepository(ApplicationDbContext ApplicationDbContextFake)
+    public static IStatusTypeRepository GetStatusTypeRepository()
     {
-        var statustype = new List<StatusType>();
-
-        statustype.Add(StatusType.Inactivo);
-        statustype.Add(StatusType.Activo);
-
-        ApplicationDbContextFake.Set<StatusType>().AddRange(statustype);
-        ApplicationDbContextFake.SaveChanges();
+        return new Mock<IStatusTypeRepository>().Object;
     }
+    public static IStatusTypeReadRepository GetStatusTypeReadRepository(IStatusTypeRepository statusTypeRepository)
+    {
+        var appCache = new Mock<IAppCache>().Object;
+        return new CacheProvider(statusTypeRepository, appCache);
+    }
+    public static async Task AddDataStatusTypeRepository(IStatusTypeRepository statusTypeRepository, IUnitOfWork unitOfWork)
+    {
+        statusTypeRepository.Add(StatusType.Inactivo);
+        statusTypeRepository.Add(StatusType.Activo);
+
+        await unitOfWork.SaveChangesAsync();
+    }
+
 }

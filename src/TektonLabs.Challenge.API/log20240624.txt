@@ -1,0 +1,39 @@
+2024-06-24 17:09:46.681 -05:00 [INF] Executed DbCommand (67ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-06-24 17:09:46.775 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-06-24 17:09:46.795 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-06-24 17:09:46.821 -05:00 [INF] No migrations were applied. The database is already up to date.
+2024-06-24 17:09:47.491 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__code_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Code", "s"."Name"
+FROM "StatusType" AS "s"
+WHERE "s"."Code" = @__code_0
+LIMIT 1
+2024-06-24 17:09:48.564 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-24 17:09:48.565 -05:00 [INF] Hosting environment: Development
+2024-06-24 17:09:48.565 -05:00 [INF] Content root path: C:\hnavarro\Personal\Repository\TektonLabs\src\TektonLabs.Challenge.API
+2024-06-24 17:09:49.172 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44332/swagger - null null
+2024-06-24 17:09:49.693 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44332/swagger/index.html - null null
+2024-06-24 17:09:49.761 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44332/swagger - 301 null null 589.6813ms
+2024-06-24 17:09:50.001 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44332/swagger/index.html - 200 null text/html;charset=utf-8 302.4852ms
+2024-06-24 17:09:50.013 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44332/swagger/swagger-ui-bundle.js - null null
+2024-06-24 17:09:50.026 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44332/swagger/swagger-ui.css - null null
+2024-06-24 17:09:50.026 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44332/_vs/browserLink - null null
+2024-06-24 17:09:50.026 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44332/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-24 17:09:50.027 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44332/swagger/swagger-ui-standalone-preset.js - null null
+2024-06-24 17:09:50.044 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44332/_framework/aspnetcore-browser-refresh.js - 200 13784 application/javascript; charset=utf-8 17.6913ms
+2024-06-24 17:09:50.118 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-06-24 17:09:50.118 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-06-24 17:09:50.120 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-06-24 17:09:50.126 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44332/swagger/swagger-ui.css - 200 143943 text/css 112.0731ms
+2024-06-24 17:09:50.146 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44332/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 119.5257ms
+2024-06-24 17:09:50.183 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44332/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 171.4629ms
+2024-06-24 17:09:50.266 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44332/_vs/browserLink - 200 null text/javascript; charset=UTF-8 239.6784ms
+2024-06-24 17:09:50.537 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44332/swagger/v1/swagger.json - null null
+2024-06-24 17:09:50.615 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44332/swagger/favicon-32x32.png - null null
+2024-06-24 17:09:50.617 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-06-24 17:09:50.619 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44332/swagger/favicon-32x32.png - 200 628 image/png 3.4992ms
+2024-06-24 17:09:50.775 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44332/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 237.9252ms

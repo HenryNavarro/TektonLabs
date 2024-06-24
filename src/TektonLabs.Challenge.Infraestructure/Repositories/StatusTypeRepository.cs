@@ -5,7 +5,7 @@ using TektonLabs.Challenge.Domain.Products.IRepository;
 namespace TektonLabs.Challenge.Infraestructure.Repositories;
 internal sealed class StatusTypeRepository : IStatusTypeRepository
 {
-    protected readonly ApplicationDbContext DbContext;
+    private readonly ApplicationDbContext DbContext;
 
     public StatusTypeRepository(ApplicationDbContext dbContext)
     {

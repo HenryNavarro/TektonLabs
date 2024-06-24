@@ -4,7 +4,7 @@ using TektonLabs.Challenge.Domain.Abstranctions;
 
 namespace TektonLabs.Challenge.Infraestructure.ExternalServices;
 
-internal sealed class ProductExternalService : IProductExternalService
+public sealed class ProductExternalService : IProductExternalService
 {
     private readonly HttpClient _httpClient;
     JsonSerializerOptions _serializerOptions;

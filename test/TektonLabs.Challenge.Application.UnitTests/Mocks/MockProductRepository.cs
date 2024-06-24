@@ -1,20 +1,30 @@
 ﻿using Bogus;
+using Moq;
+using TektonLabs.Challenge.Domain.Abstranctions;
 using TektonLabs.Challenge.Domain.Products;
+using TektonLabs.Challenge.Domain.Products.IRepository;
 using TektonLabs.Challenge.Infraestructure;
+using TektonLabs.Challenge.Infraestructure.Repositories;
 
 namespace TektonLabs.Challenge.Application.UnitTests.Mocks;
 
 internal sealed class MockProductRepository
 {
-    public static void AddDataProductRepository(ApplicationDbContext ApplicationDbContextFake)
+    public static IProductRepository GetProductRepository()
     {
-        var products = new List<Product>();
-
+        return new Mock<IProductRepository>().Object;
+    }
+    public static IProductRepository GetProductRepository(ApplicationDbContext applicationDbContext)
+    {
+        return new ProductRepository(applicationDbContext);
+    }
+    public static async Task AddDataProductRepository(IProductRepository productRepository, IUnitOfWork unitOfWork)
+    {
         var fake = new Faker();
 
         for (int i = 1; i <= 10; i++)
         {
-            products.Add(
+            productRepository.Add(
                 Product.Create(
                     i,
                     fake.Commerce.ProductName(),
@@ -25,8 +35,6 @@ internal sealed class MockProductRepository
                 )
             );
         }
-
-        ApplicationDbContextFake.Set<Product>().AddRange(products);
-        ApplicationDbContextFake.SaveChanges();
+        await unitOfWork.SaveChangesAsync();
     }
 }
