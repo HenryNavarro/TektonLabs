@@ -7,7 +7,7 @@ using TektonLabs.Challenge.Domain.Products.IRepository;
 
 namespace TektonLabs.Challenge.Application.Products.CreateProduct;
 
-internal sealed class CreateProductCommandHandler : ICommandHandler<CreateProductCommand>
+public sealed class CreateProductCommandHandler : ICommandHandler<CreateProductCommand>
 {
     private readonly IProductRepository _productRepository;
     private readonly IUnitOfWork _unitOfWork;

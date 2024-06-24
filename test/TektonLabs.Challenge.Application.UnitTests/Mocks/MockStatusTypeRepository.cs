@@ -6,17 +6,12 @@ internal sealed class MockStatusTypeRepository
 {
     public static void AddDataStatusTypeRepository(ApplicationDbContext ApplicationDbContextFake)
     {
-        var fixture = new Fixture();
-        fixture.Behaviors.Add(new OmitOnRecursionBehavior());
+        var statustype = new List<StatusType>();
 
-        var statusType = fixture.CreateMany<StatusType>().ToList();
+        statustype.Add(StatusType.Inactivo);
+        statustype.Add(StatusType.Activo);
 
-        statusType.Add(fixture.Build<StatusType>()
-            .With(tr => tr., "vaxidrez")
-            .Create()
-        );
-
-        ApplicationDbContextFake.StatusType!.Add(statusType);
+        ApplicationDbContextFake.Set<StatusType>().AddRange(statustype);
         ApplicationDbContextFake.SaveChanges();
     }
 }

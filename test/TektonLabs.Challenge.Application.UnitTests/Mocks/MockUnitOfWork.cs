@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Moq;
 using TektonLabs.Challenge.Domain.Abstranctions;
 using TektonLabs.Challenge.Infraestructure;
@@ -13,10 +14,10 @@ internal static class MockUnitOfWork
             .UseInMemoryDatabase(databaseName: $"ApplicationDbContext-{dbContextId}")
             .Options;
 
-        var ApplicationDbContextFake = new ApplicationDbContext(options,);
+        Mock<IPublisher> publisher = new Mock<IPublisher>();
+        var ApplicationDbContextFake = new ApplicationDbContext(options, publisher.Object);
         ApplicationDbContextFake.Database.EnsureDeleted();
         var mockUnitOfWork = new Mock<IUnitOfWork>(ApplicationDbContextFake);
-
 
         return mockUnitOfWork;
     }

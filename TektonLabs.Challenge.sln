@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{23A79661-6
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TektonLabs.Challenge.Application.UnitTests", "test\TektonLabs.Challenge.Application.UnitTests\TektonLabs.Challenge.Application.UnitTests.csproj", "{43674EE0-6C62-4295-914D-7919CA1F56EF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TektonLabs.Challenge.Infraestructure.UnitTests", "test\TektonLabs.Challenge.Infraestructure.UnitTests\TektonLabs.Challenge.Infraestructure.UnitTests.csproj", "{672C6BBA-DA1C-4B1A-A1D1-22164EC84CE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{43674EE0-6C62-4295-914D-7919CA1F56EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43674EE0-6C62-4295-914D-7919CA1F56EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43674EE0-6C62-4295-914D-7919CA1F56EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{672C6BBA-DA1C-4B1A-A1D1-22164EC84CE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{672C6BBA-DA1C-4B1A-A1D1-22164EC84CE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{672C6BBA-DA1C-4B1A-A1D1-22164EC84CE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{672C6BBA-DA1C-4B1A-A1D1-22164EC84CE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{34DABBAC-6558-460A-895D-AC55A3CBEE2A} = {11738A42-ACE0-4684-A58A-9AC0E8B9CF10}
 		{D21AF65C-BD07-4C69-9585-91275FE8EB0B} = {11738A42-ACE0-4684-A58A-9AC0E8B9CF10}
 		{43674EE0-6C62-4295-914D-7919CA1F56EF} = {23A79661-684D-4024-B137-0C39C695441D}
+		{672C6BBA-DA1C-4B1A-A1D1-22164EC84CE4} = {23A79661-684D-4024-B137-0C39C695441D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F514ECFD-5C50-4636-AEB9-0AA34330569D}

@@ -1,35 +1,49 @@
-﻿namespace TektonLabs.Challenge.Application.UnitTests.Products.Create;
-internal sealed class CreteProductCommandHandlerXUnitTests
+﻿using FluentAssertions;
+using Moq;
+using TektonLabs.Challenge.Application.Abstractions.Discount;
+using TektonLabs.Challenge.Application.Products.CreateProduct;
+using TektonLabs.Challenge.Application.UnitTests.Mocks;
+using TektonLabs.Challenge.Domain.Abstranctions;
+using TektonLabs.Challenge.Domain.Products;
+using TektonLabs.Challenge.Domain.Products.IRepository;
+using Xunit;
+
+namespace TektonLabs.Challenge.Application.UnitTests.Products.Create;
+public sealed class CreteProductCommandHandlerXUnitTests
 {
-        private readonly Mock<UnitOfWork> _unitOfWork;
-    //private readonly Mock<IEmailService> _emailService;
-    private readonly Mock<ILogger<CreateProductCommandHandler>> _logger;
+    private readonly Mock<IUnitOfWork> _unitOfWork;
+    private readonly Mock<IProductRepository> _productRepository;
+    private readonly Mock<IProductExternalService> _productExternalService;
 
     public CreteProductCommandHandlerXUnitTests()
     {
         _unitOfWork = MockUnitOfWork.GetUnitOfWork();
-
-        _emailService = new Mock<IEmailService>();
-
-        _logger = new Mock<ILogger<CreateStreamerCommandHandler>>();
-
-
-        MockStreamerRepository.AddDataStreamerRepository(_unitOfWork.Object.StreamerDbContext);
+        _productRepository = new Mock<IProductRepository>();
+        _productExternalService = new Mock<IProductExternalService>();
     }
 
     [Fact]
     public async Task CreateStreamerCommand_InputStreamer_ReturnsNumber()
     {
-        var streamerInput = new CreateStreamerCommand
-        {
-            Nombre = "Vaxi Streaming",
-            Url = "https://vaxistreaming.com"
-        };
+        var productInput = new CreateProductCommand
+        (
+            1,
+            "Azufre",
+            "Lorem",
+            99,
+            100,
+            StatusType.Activo.Code
+        );
 
-        var handler = new CreateStreamerCommandHandler(_unitOfWork.Object, _mapper, _emailService.Object, _logger.Object);
+        var handler = new CreateProductCommandHandler(
+            _productRepository.Object,
+            _unitOfWork.Object,
+            _productExternalService.Object
+            );
 
-        var result = await handler.Handle(streamerInput, CancellationToken.None);
+        var result = await handler.Handle(productInput, CancellationToken.None);
 
-        result.ShouldBeOfType<int>();
+        result.Should().Be(result.IsSuccess);
+
     }
 }
