@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TektonLabs.Challenge.Application.Abstractions.Discount;
 using TektonLabs.Challenge.Application.Abstractions.Email;
-using TektonLabs.Challenge.Domain.Abstranctions;
+using TektonLabs.Challenge.Domain.Abstractions;
 using TektonLabs.Challenge.Domain.Products.IRepository;
 using TektonLabs.Challenge.Infraestructure.Cache;
 using TektonLabs.Challenge.Infraestructure.Email;

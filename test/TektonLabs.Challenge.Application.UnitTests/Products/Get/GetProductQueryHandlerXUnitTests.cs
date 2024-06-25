@@ -2,7 +2,7 @@
 using Moq;
 using TektonLabs.Challenge.Application.Products.Get;
 using TektonLabs.Challenge.Application.UnitTests.Mocks;
-using TektonLabs.Challenge.Domain.Abstranctions;
+using TektonLabs.Challenge.Domain.Abstractions;
 using TektonLabs.Challenge.Domain.Products.IRepository;
 using Xunit;
 

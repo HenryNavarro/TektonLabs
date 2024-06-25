@@ -1,5 +1,5 @@
 ﻿using TektonLabs.Challenge.Application.Abstractions.Messaging;
-using TektonLabs.Challenge.Domain.Abstranctions;
+using TektonLabs.Challenge.Domain.Abstractions;
 using TektonLabs.Challenge.Domain.Products.Errors;
 using TektonLabs.Challenge.Domain.Products.IRepository;
 

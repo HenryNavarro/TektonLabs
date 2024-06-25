@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using TektonLabs.Challenge.Domain.Abstranctions;
+using TektonLabs.Challenge.Domain.Abstractions;
 
 namespace TektonLabs.Challenge.Application.Abstractions.Messaging;
 public interface ICommandHandler<TCommand> : IRequestHandler<TCommand, Result>

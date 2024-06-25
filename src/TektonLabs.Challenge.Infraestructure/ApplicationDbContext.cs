@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using TektonLabs.Challenge.Application.Exceptions;
-using TektonLabs.Challenge.Domain.Abstranctions;
+using TektonLabs.Challenge.Domain.Abstractions;
 
 namespace TektonLabs.Challenge.Infraestructure;
 public sealed class ApplicationDbContext : DbContext, IUnitOfWork

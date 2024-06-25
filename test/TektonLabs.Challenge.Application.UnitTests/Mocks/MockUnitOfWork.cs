@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Moq;
-using TektonLabs.Challenge.Domain.Abstranctions;
+using TektonLabs.Challenge.Domain.Abstractions;
 using TektonLabs.Challenge.Infraestructure;
 
 namespace TektonLabs.Challenge.Application.UnitTests.Mocks;

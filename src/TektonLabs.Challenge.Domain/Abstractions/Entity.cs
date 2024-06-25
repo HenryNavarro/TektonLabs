@@ -1,4 +1,4 @@
-﻿namespace TektonLabs.Challenge.Domain.Abstranctions;
+﻿namespace TektonLabs.Challenge.Domain.Abstractions;
 public abstract class Entity
 {
     private readonly List<IDomainEvent> _domainEvents = new();

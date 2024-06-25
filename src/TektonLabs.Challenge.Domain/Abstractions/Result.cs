@@ -1,4 +1,4 @@
-﻿namespace TektonLabs.Challenge.Domain.Abstranctions;
+﻿namespace TektonLabs.Challenge.Domain.Abstractions;
 public class Result
 {
     protected internal Result(bool isSuccess, Error error)

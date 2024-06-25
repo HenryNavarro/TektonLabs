@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 using TektonLabs.Challenge.Application.Abstractions.Discount;
-using TektonLabs.Challenge.Domain.Abstranctions;
+using TektonLabs.Challenge.Domain.Abstractions;
 
 namespace TektonLabs.Challenge.Infraestructure.ExternalServices;
 

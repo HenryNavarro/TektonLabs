@@ -1,4 +1,4 @@
-﻿namespace TektonLabs.Challenge.Domain.Abstranctions;
+﻿namespace TektonLabs.Challenge.Domain.Abstractions;
 public record Error(string Code, string Name)
 {
     public static Error None = new(string.Empty, string.Empty);

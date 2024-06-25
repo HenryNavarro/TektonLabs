@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using TektonLabs.Challenge.Domain.Abstranctions;
+using TektonLabs.Challenge.Domain.Abstractions;
 
 namespace TektonLabs.Challenge.Infraestructure.Repositories;
 

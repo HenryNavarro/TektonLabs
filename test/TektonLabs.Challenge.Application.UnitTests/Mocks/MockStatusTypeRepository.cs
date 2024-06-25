@@ -1,6 +1,6 @@
 ﻿using LazyCache;
 using Moq;
-using TektonLabs.Challenge.Domain.Abstranctions;
+using TektonLabs.Challenge.Domain.Abstractions;
 using TektonLabs.Challenge.Domain.Products;
 using TektonLabs.Challenge.Domain.Products.IRepository;
 using TektonLabs.Challenge.Infraestructure.Cache;

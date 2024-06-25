@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace TektonLabs.Challenge.Domain.Abstranctions;
+namespace TektonLabs.Challenge.Domain.Abstractions;
 
 public interface IDomainEvent : INotification
 {

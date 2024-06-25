@@ -3,7 +3,7 @@ using FluentAssertions;
 using TektonLabs.Challenge.Application.Abstractions.Discount;
 using TektonLabs.Challenge.Application.Products.CreateProduct;
 using TektonLabs.Challenge.Application.UnitTests.Mocks;
-using TektonLabs.Challenge.Domain.Abstranctions;
+using TektonLabs.Challenge.Domain.Abstractions;
 using TektonLabs.Challenge.Domain.Products;
 using TektonLabs.Challenge.Domain.Products.IRepository;
 using Xunit;

@@ -468,7 +468,7 @@ FROM "StatusType" AS "s"
 WHERE "s"."Code" = @__code_0
 LIMIT 1
 2024-06-18 23:21:20.902 -05:00 [INF] Request GetProductQuery se ejecuto en: 102 ms
-2024-06-18 23:21:20.917 -05:00 [INF] Executing OkObjectResult, writing value of type 'TektonLabs.Challenge.Domain.Abstranctions.Result`1[[TektonLabs.Challenge.Application.Products.Get.GetProductResponse, TektonLabs.Challenge.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-18 23:21:20.917 -05:00 [INF] Executing OkObjectResult, writing value of type 'TektonLabs.Challenge.Domain.Abstractions.Result`1[[TektonLabs.Challenge.Application.Products.Get.GetProductResponse, TektonLabs.Challenge.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
 2024-06-18 23:21:20.939 -05:00 [INF] Executed action TektonLabs.Challenge.API.Controllers.Product.ProductsController.Get (TektonLabs.Challenge.API) in 153.1918ms
 2024-06-18 23:21:20.940 -05:00 [INF] Executed endpoint 'TektonLabs.Challenge.API.Controllers.Product.ProductsController.Get (TektonLabs.Challenge.API)'
 2024-06-18 23:21:20.947 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44332/api/products/51 - 200 null application/json; charset=utf-8 192.586ms
@@ -482,7 +482,7 @@ FROM "Product" AS "p"
 WHERE "p"."Id" = @__id_0
 LIMIT 1
 2024-06-18 23:21:34.724 -05:00 [INF] Request GetProductQuery se ejecuto en: 4 ms
-2024-06-18 23:21:34.725 -05:00 [INF] Executing OkObjectResult, writing value of type 'TektonLabs.Challenge.Domain.Abstranctions.Result`1[[TektonLabs.Challenge.Application.Products.Get.GetProductResponse, TektonLabs.Challenge.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-18 23:21:34.725 -05:00 [INF] Executing OkObjectResult, writing value of type 'TektonLabs.Challenge.Domain.Abstractions.Result`1[[TektonLabs.Challenge.Application.Products.Get.GetProductResponse, TektonLabs.Challenge.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
 2024-06-18 23:21:34.725 -05:00 [INF] Executed action TektonLabs.Challenge.API.Controllers.Product.ProductsController.Get (TektonLabs.Challenge.API) in 6.9134ms
 2024-06-18 23:21:34.726 -05:00 [INF] Executed endpoint 'TektonLabs.Challenge.API.Controllers.Product.ProductsController.Get (TektonLabs.Challenge.API)'
 2024-06-18 23:21:34.726 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44332/api/products/50 - 200 null application/json; charset=utf-8 9.6971ms

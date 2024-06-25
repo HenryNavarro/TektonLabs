@@ -1,4 +1,4 @@
-﻿using TektonLabs.Challenge.Domain.Abstranctions;
+﻿using TektonLabs.Challenge.Domain.Abstractions;
 
 namespace TektonLabs.Challenge.Domain.Products.Errors;
 public static class StatusTypeErrors
