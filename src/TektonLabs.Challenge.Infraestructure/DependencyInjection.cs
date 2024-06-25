@@ -41,7 +41,7 @@ public static class DependencyInjection
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
 
         services.AddLazyCache();
-        services.AddTransient<IStatusTypeReadRepository, CacheProvider>();
+        services.AddScoped<IStatusTypeReadRepository, CacheProvider>();
 
         return services;
     }
